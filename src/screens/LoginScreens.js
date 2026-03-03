@@ -1,7 +1,11 @@
 import React from 'react';
 import { View, Text, Alert, Image, TextInput, TouchableOpacity, Button} from 'react-native';
 
-export default function LoginScreens() {
+export default function LoginScreens(props) {
+    const { navigation } = props;
+    const gotoMenuPrincipal = () => {
+        navigation.navigate('MenuPrincipal');
+    };
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const usuario = [
@@ -16,6 +20,7 @@ export default function LoginScreens() {
         if (user) {
             // Login successful
             Alert.alert('Login successful');
+            gotoMenuPrincipal();
         } else {
             // Login failed
             Alert.alert('Login failed');
@@ -25,12 +30,12 @@ export default function LoginScreens() {
         
         <View style={styles.container}>
             <Text>BIENVENIDO A PIZZERIA TECNM</Text>
-            <Image style={styles.Image}  />
+            {/* <Image style={styles.Image}  /> */}
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Iniciar Sesión</Text>
             </TouchableOpacity>
             <TextInput style={styles.input} placeholder="Email" value={email} onChangeText={setEmail} />
-            <TextInput style={styles.input} placeholder="Contraseña" value={password} onChangeText={setPassword} secureTextEntry />
+            <TextInput style={styles.input} placeholder="Contraseña" value={password} onChangeText={setPassword} />
 
             <Button title="Registrarse" onPress={() => Alert.alert('Registro no implementado')} />
 
