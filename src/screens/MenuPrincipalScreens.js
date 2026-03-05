@@ -22,10 +22,10 @@ export default function MenuPrincipalScreens(props) {
             resizeMode="cover"
         >
             <StatusBar barStyle="light-content" />
-            {/* Capa de contraste para legibilidad */}
+            {}
             <View style={styles.overlay}>
                 
-                <Text style={styles.title}>MENÚ PRINCIPAL</Text>
+                <Text style={styles.title}>Menu Principal</Text>
                 <View style={styles.divider} />
 
                 <View style={styles.menuContainer}>
@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
     },
     overlay: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Oscurece el fondo para resaltar botones
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
         alignItems: 'center',
         paddingHorizontal: 20,
     },
     title: {
-        color: "#f4ce14", // Amarillo Queso
+        color: "#f4ce14",
         fontSize: 32,
         fontWeight: '900',
         marginTop: 60,
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     divider: {
         width: 60,
         height: 4,
-        backgroundColor: '#d32f2f', // Rojo Pizza
+        backgroundColor: '#d32f2f',
         marginTop: 10,
         borderRadius: 2,
     },
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         width: '100%',
-        gap: 20, // Espaciado entre botones
+        gap: 20,
     },
     mainButton: {
         backgroundColor: '#d32f2f',
@@ -92,8 +92,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         alignItems: 'center',
         borderBottomWidth: 4,
-        borderBottomColor: '#a12323', // Efecto 3D
-        elevation: 5,
+        borderBottomColor: '#a12323',
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 4 },
         shadowOpacity: 0.3,
