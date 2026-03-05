@@ -9,19 +9,19 @@ export default function MenuPrincipal({ navigation }) {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            {/* Encabezado con Logo */}
+            {}
             <View style={styles.header}>
                 <Text style={styles.title}>PIZZERIA DON RITO TECNM</Text>
                 <Text style={styles.subtitle}>"El sabor de la tradición en cada rebanada"</Text>
             </View>
 
-            {/* Imagen Ilustrativa */}
+            {}
             <Image 
-                source={{ uri: 'https://via.placeholder.com/150' }} // Reemplaza con tu logo local o URL real
+                source={{ uri: 'https://via.placeholder.com/150' }} 
                 style={styles.logo} 
             />
 
-            {/* Sección de Información */}
+            {}
             <View style={styles.infoCard}>
                 <Text style={styles.sectionTitle}>Nuestra Historia</Text>
                 <Text style={styles.description}>
@@ -34,7 +34,7 @@ export default function MenuPrincipal({ navigation }) {
                 <Text style={styles.description}>Domingos: 2:00 PM - 9:00 PM</Text>
             </View>
 
-            {/* Botón de Salir */}
+            {}
             <TouchableOpacity style={styles.logoutButton} onPress={handleLogout}>
                 <Text style={styles.logoutText}>Cerrar Sesión</Text>
             </TouchableOpacity>

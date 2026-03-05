@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         marginBottom: 15,
         overflow: 'hidden',
-        elevation: 4, // Sombra para Android
-        shadowColor: '#000', // Sombra para iOS
+        elevation: 4, 
+        shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 5,
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         color: '#2e7d32',
     },
     addButton: {
-        backgroundColor: '#f4ce14', // Amarillo queso
+        backgroundColor: '#f4ce14',
         paddingVertical: 5,
         paddingHorizontal: 12,
         borderRadius: 8,

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View, TouchableOpacity, Text, FlatList } from "react-native";
+import { View, TouchableOpacity, Text, FlatList, ImageBackground } from "react-native";
 import { CartContext } from "./CartContext.js";
 
 export default function OrdersDetailScreens(props) {
@@ -14,6 +14,11 @@ export default function OrdersDetailScreens(props) {
     };
 
     return (
+        <ImageBackground 
+            source={{ uri: 'https://i.pinimg.com/236x/9b/18/e2/9b18e2d84235711419d37109321c91c6.jpg' }}
+            style={styles.background}
+            resizeMode="cover"
+        >
         <View style={styles.container}>
             <Text style={styles.title}>Detalle de Órdenes</Text>
 
@@ -32,21 +37,24 @@ export default function OrdersDetailScreens(props) {
                 />
             </View>
 
-            {/* Tu botón de salida intacto */}
+            {}
             <View style={styles.buttonExitContainer}>
                 <TouchableOpacity style={styles.buttonExit} onPress={gotoexit}>
                     <Text style={styles.buttonText}>Exit</Text>
                 </TouchableOpacity>
             </View>
         </View>
+        </ImageBackground>
     );
 };
 
 const styles = {
+    background: {
+        flex: 1,
+    },
     container: {
         flex: 1,
         alignItems: "center",
-        backgroundColor: '#f5f5f5', 
     },
     title: {
         color: "#181717",

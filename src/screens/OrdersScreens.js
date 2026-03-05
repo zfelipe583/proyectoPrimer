@@ -91,15 +91,18 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     titulo: {
-        fontSize: 22,
-        marginBottom: 20,
+        fontSize: 32,
+        marginBottom: 24,
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: 'white'
     },
     label: {
         fontSize: 16,
         marginBottom: 5,
-        fontWeight: '600'
+        fontWeight: '600',
+        color: 'white'
+
     },
     input: {
         borderWidth: 1,
@@ -117,7 +120,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff'
     },
     boton: {
-        backgroundColor: 'blue',
+        backgroundColor: '#f4ce14',
         padding: 15,
         borderRadius: 5,
         alignItems: 'center',
