@@ -14,12 +14,18 @@ export default function OrdersScreen() {
         Alert.alert("Aviso", "Por favor selecciona una pizza y el tamaño");
         return;
         }
+        const cantidadNum = parseInt(quantity);
+        if (isNaN(cantidadNum) || cantidadNum <= 0) {
+        Alert.alert("Aviso", "Por favor ingresa una cantidad válida");
+        return;
+        }
+        
 
         addToCart({
         id: Date.now(),
         name: selectedPizza,
         size: size,
-        quantity: parseInt(quantity)
+        quantity: cantidadNum
         });
 
 

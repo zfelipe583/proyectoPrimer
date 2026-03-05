@@ -12,12 +12,12 @@ export default function MenuPrincipal({ navigation }) {
             {}
             <View style={styles.header}>
                 <Text style={styles.title}>PIZZERIA DON RITO TECNM</Text>
-                <Text style={styles.subtitle}>"El sabor de la tradición en cada rebanada"</Text>
+                <Text style={styles.subtitle}>"El sabor del Area de Informatica"</Text>
             </View>
 
             {}
             <Image 
-                source={{ uri: 'https://via.placeholder.com/150' }} 
+                source={{ uri: 'https://www.huauchinango.tecnm.mx/wp-content/uploads/2019/10/logotecnm.jpg' }} 
                 style={styles.logo} 
             />
 
@@ -25,13 +25,13 @@ export default function MenuPrincipal({ navigation }) {
             <View style={styles.infoCard}>
                 <Text style={styles.sectionTitle}>Nuestra Historia</Text>
                 <Text style={styles.description}>
-                    Fundada con el apoyo de la comunidad del TECNM, Pizzería Don Rito nace de la pasión por la cocina artesanal. 
-                    Utilizamos ingredientes frescos y nuestra receta secreta de masa que nos ha hecho favoritos en la región.
+                    Fundada con el apoyo de la comunidad del TECNM, Pizzería Don Rito nace de la pasión por la cocina artesanal y el Area de QA. 
+                    Utilizamos ingredientes frescos y utilizamos SCRUM para cada Pizza.
                 </Text>
                 
-                <Text style={styles.sectionTitle}>Horarios de Atención</Text>
+                <Text style={styles.sectionTitle}>Horarios</Text>
                 <Text style={styles.description}>Lunes a Sábado: 12:00 PM - 10:00 PM</Text>
-                <Text style={styles.description}>Domingos: 2:00 PM - 9:00 PM</Text>
+                <Text style={styles.description}>Domingos: Cerrado</Text>
             </View>
 
             {}
