@@ -1,5 +1,5 @@
 import React, { useState , useContext} from "react";
-import { View, Text, TouchableOpacity, TextInput, StyleSheet, Alert } from "react-native";
+import { View, Text, TouchableOpacity, TextInput, StyleSheet, Alert, ImageBackground } from "react-native";
 import { Picker } from '@react-native-picker/picker';
 import { CartContext } from "./CartContext.js";
 
@@ -30,6 +30,12 @@ export default function OrdersScreen() {
 };
 
 return (
+
+    <ImageBackground 
+            source={{ uri: 'https://i.pinimg.com/236x/5e/fd/75/5efd754c144b755e56dc79d61491471a.jpg' }}
+            style={styles.background}
+            resizeMode="cover"
+    >
     <View style={styles.container}>
     <Text style={styles.titulo}>Nueva Orden</Text>
     
@@ -52,9 +58,9 @@ return (
             selectedValue={size}
             onValueChange={(itemValue) => setSize(itemValue)}
         >
-            <Picker.Item label="Chica ($90)" value="chica" />
-            <Picker.Item label="Mediana ($120)" value="mediana" />
-            <Picker.Item label="Familiar ($180)" value="familiar" />
+            <Picker.Item label="Chica" value="chica" />
+            <Picker.Item label="Mediana" value="mediana" />
+            <Picker.Item label="Familiar" value="familiar" />
         </Picker>
     </View>
 
@@ -71,10 +77,14 @@ return (
         <Text style={styles.textoBoton}>Guardar Orden</Text>
     </TouchableOpacity>
     </View>
+    </ImageBackground>
 );
 }
 
 const styles = StyleSheet.create({
+        background: {
+        flex: 1,
+    },
     container: {
         flex: 1,
         justifyContent: 'center',

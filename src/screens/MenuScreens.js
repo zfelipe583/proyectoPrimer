@@ -4,31 +4,31 @@ import { View, Text, StyleSheet, FlatList, Image, TouchableOpacity, Alert, Butto
 const PIZZAS = [
     {
         id: '1',
-        nombre: 'Pepperoni Clásica',
+        nombre: 'Pepperoni',
         descripcion: 'Doble porción de pepperoni con mozzarella fundido.',
-        precio: '$180',
+        precio: '',
         imagen: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=200&auto=format&fit=crop'
     },
     {
         id: '2',
-        nombre: 'Hawaiana Especial',
+        nombre: 'Hawaiana',
         descripcion: 'Jamón premium, piña miel y un toque de cereza.',
-        precio: '$195',
+        precio: '',
         imagen: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=200&auto=format&fit=crop'
     },
     {
         id: '3',
         nombre: 'Mexicana TECNM',
         descripcion: 'Chorizo, jalapeños, cebolla y frijoles bayos.',
-        precio: '$210',
+        precio: '',
         imagen: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?q=80&w=200&auto=format&fit=crop'
     },
     {
         id: '4',
-        nombre: 'Carnes Frías',
+        nombre: 'Vegetariana',
         descripcion: 'Salami, tocino, jamón y salchicha italiana.',
-        precio: '$230',
-        imagen: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=200&auto=format&fit=crop'
+        precio: '',
+        imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8oeMKwm7hkiBJasqT5GcwOwXxjq-Q6R1Tg&s'
     },
 ];
 
@@ -42,12 +42,7 @@ export default function MenuPizzas({ navigation }) {
                 <Text style={styles.pizzaDesc}>{item.descripcion}</Text>
                 <View style={styles.priceRow}>
                     <Text style={styles.price}>{item.precio}</Text>
-                    <TouchableOpacity 
-                        style={styles.addButton} 
-                        onPress={() => Alert.alert('Añadido', `Agregaste una ${item.nombre} al carrito`)}
-                    >
-                        <Text style={styles.addButtonText}>Agregar</Text>
-                    </TouchableOpacity>
+
                 </View>
             </View>
         </View>

@@ -10,6 +10,7 @@ export default function CustomerScreens(props) {
         navigation.navigate("MenuPizza");
     };
     return (
+
         <View style={styles.container}> 
             <Text style={styles.title}>Customer</Text>
             <TouchableOpacity style={styles.button} onPress={goToMenu}>
