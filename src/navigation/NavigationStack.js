@@ -6,6 +6,8 @@ import OrdersScreen from '../screens/OrdersScreens.js'
 import OrdersDetailScreens from '../screens/OrdersDetailScreens.js';
 import CustomerScreens from '../screens/CustomerScreens.js';
 import Nosotros from '../screens/Nosotros.js';
+import MenuPizzas from '../screens/MenuScreens.js';
+
 
 
 
@@ -22,6 +24,9 @@ export default function NavigationStack() {
                 <Stack.Screen name="OrdersD" component={OrdersDetailScreens}/>
                 <Stack.Screen name="Customer" component={CustomerScreens}/>
                 <Stack.Screen name="Nosotros" component={Nosotros}/>
+                <Stack.Screen name="MenuPizza" component={MenuPizzas}/>
+                
+
 
             </Stack.Navigator>
         </NavigationContainer>

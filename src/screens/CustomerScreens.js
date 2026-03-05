@@ -3,21 +3,23 @@ import { View, Text, TouchableOpacity } from "react-native";
 
 export default function CustomerScreens(props) {
     const { navigation } = props;
-    const gotoMenu = () => {
-        navigation.navigate("MenuPrincipal");
-    }
     const gotoOrders = () => {
         navigation.navigate("Orders");
     }
+        const goToMenu = () => {
+        navigation.navigate("MenuPizza");
+    };
     return (
         <View style={styles.container}> 
             <Text style={styles.title}>Customer</Text>
-            <TouchableOpacity style={styles.button} onPress={gotoMenu}>
+            <TouchableOpacity style={styles.button} onPress={goToMenu}>
                 <Text style={styles.buttonText}>Menu</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={gotoOrders}>
                 <Text style={styles.buttonText}>Orders</Text>
             </TouchableOpacity>
+
+
 
         </View>
     );
