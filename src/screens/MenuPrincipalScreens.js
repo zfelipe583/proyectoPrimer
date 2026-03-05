@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Button } from 'react-native';
+import { View, Text, TouchableOpacity, Button, BackHandler } from 'react-native';
 
 export default function MenuPrincipalScreens(props) {
     const { navigation } = props;
@@ -15,11 +15,21 @@ export default function MenuPrincipalScreens(props) {
         navigation.navigate("Nosotros");
     };
     const exitApp = () => {
-
-        navigation.reset({
-            index: 0,
-            routes: [{ name: 'Login' }],
-        });
+        Alert.alert(
+            "Cerrar Aplicación",
+            "¿Seguro que quieres salir de Pizzería Don Rito?",
+            [
+                {
+                    text: "Cancelar",
+                    onPress: () => console.log("Cancelado"),
+                    style: "cancel"
+                },
+                { 
+                    text: "Salir", 
+                    onPress: () => BackHandler.exitApp() // Esto cierra la app en Android
+                }
+            ]
+        );
     };
     return (
         <View style={styles.container}>
