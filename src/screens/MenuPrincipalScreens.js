@@ -12,7 +12,7 @@ export default function MenuPrincipalScreens(props) {
         
     };
     const goToUS = () => {
-        
+        navigation.navigate("Nosotros");
     };
     const exitApp = () => {
 

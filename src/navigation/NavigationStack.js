@@ -5,6 +5,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OrdersScreen from '../screens/OrdersScreens.js'
 import OrdersDetailScreens from '../screens/OrdersDetailScreens.js';
 import CustomerScreens from '../screens/CustomerScreens.js';
+import Nosotros from '../screens/Nosotros.js';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -18,6 +21,8 @@ export default function NavigationStack() {
                 <Stack.Screen name="Orders" component={OrdersScreen}/>
                 <Stack.Screen name="OrdersD" component={OrdersDetailScreens}/>
                 <Stack.Screen name="Customer" component={CustomerScreens}/>
+                <Stack.Screen name="Nosotros" component={Nosotros}/>
+
             </Stack.Navigator>
         </NavigationContainer>
     );

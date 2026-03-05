@@ -9,27 +9,24 @@ export default function LoginScreens(props) {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
     const usuario = [
-        {id: 1, email: 'zfelipe@gmail.com', password: '123456'},
+        {id: 1, email: 'zfelipe', password: '123456'},
         {id: 2, email: 'jose@gmail.com', password: '123456789'},
         {id: 3, email: 'maria@gmail.com', password: '987654321'}
     ];
 
     const handleLogin = () => {
-        // Handle login logic here
         const user = usuario.find(u => u.email === email && u.password === password);
         if (user) {
-            // Login successful
             Alert.alert('Login successful');
             gotoMenuPrincipal();
         } else {
-            // Login failed
             Alert.alert('Login failed');
         }
     };
     return (
         
         <View style={styles.container}>
-            <Text>BIENVENIDO A PIZZERIA TECNM</Text>
+            <Text>BIENVENIDO A PIZZERIA DON RITO TECNM</Text>
             {/* <Image style={styles.Image}  /> */}
             <TouchableOpacity style={styles.button} onPress={handleLogin}>
                 <Text style={styles.buttonText}>Iniciar Sesión</Text>
